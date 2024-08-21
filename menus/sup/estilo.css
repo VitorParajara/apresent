@@ -1,0 +1,79 @@
+/* Reset básico */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background: #333;
+    color: #fff;
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilo do logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo dos links de navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Estilo do botão de menu para dispositivos móveis */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}

@@ -1,0 +1,87 @@
+/* Reset básico */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do menu lateral */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    /*overflow: hidden;*/
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.menu.active {
+    transform: translateX(0);
+}
+
+/* Estilo dos links do menu */
+.menu-links {
+    list-style: none;
+    padding: 20px;
+}
+
+.menu-links li {
+    margin: 15px 0;
+}
+
+.menu-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+/* Estilo do botão de menu */
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #333;
+    border-radius: 4px;
+    border: 1px solid #444;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: 4px 0;
+}
+
+/* Estilo do conteúdo principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .menu {
+        width: 200px;
+    }
+
+    .menu-toggle {
+        right: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
